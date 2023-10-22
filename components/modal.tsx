@@ -17,6 +17,7 @@ interface ModalProps {
   children: React.ReactNode;
 }
 
+// bind modal for accessibility, see- https://www.npmjs.com/package/react-modal
 Modal.setAppElement("#App");
 
 export const ModalComponent: React.FC<ModalProps> = ({ isOpen, children }) => {
