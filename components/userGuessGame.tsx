@@ -104,7 +104,10 @@ export const UserGuessGame: React.FC<UserGuessGameProps> = ({
           </form>
           <div className='self-end'>
             <Button
-              onClick={handleReset}
+              onClick={() => {
+                setTargetNumber("");
+                handleReset();
+              }}
               btnText='Reset'
               purpose={ButtonType.RESET}
             />

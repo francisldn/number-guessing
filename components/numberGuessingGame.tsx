@@ -29,7 +29,6 @@ export const NumberGuessingGame: React.FC<NumberGuessingGameProps> = ({
     setGuess(5000);
     setMessage("");
     setIsGameOver(false);
-    setGuess("");
   };
 
   return (
