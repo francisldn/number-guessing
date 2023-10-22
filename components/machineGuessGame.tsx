@@ -26,13 +26,13 @@ export const MachineGuessGame: React.FC<MachineGuessGameProps> = ({
   setMin,
 }) => {
   const handleTooHigh = () => {
-    setMax(guess - 1);
-    setGuess(Math.floor((min + guess - 1) / 2));
+    setMax(Math.max(guess - 1, 1));
+    setGuess(Math.max(Math.floor((min + guess - 1) / 2), 1));
   };
 
   const handleTooLow = () => {
-    setMin(guess + 1);
-    setGuess(Math.floor((guess + 1 + max) / 2));
+    setMin(Math.min(guess + 1, 10000));
+    setGuess(Math.min(Math.floor((guess + 1 + max) / 2), 10000));
   };
 
   const handleCorrect = () => {
@@ -47,14 +47,6 @@ export const MachineGuessGame: React.FC<MachineGuessGameProps> = ({
       <p className='text-blue-800 text-lg text-center font-bold pb-8'>
         Is it <span className='text-orange-600'>{guess}</span>?
       </p>
-      <div className='range-bar'>
-        <div
-          className='range-highlight'
-          style={{
-            width: `${((guess - min) / (max - min)) * 100}%`,
-          }}
-        ></div>
-      </div>
       <div className='flex flex-col items-center'>
         <div className='flex gap-4 justify-around'>
           <Button

@@ -18,13 +18,11 @@ export const StatusBar: React.FC<StatusBarProps> = ({ min, max }) => {
           }`}
           style={{ width: statusBarMax }}
         >
-          <p
-            className={`text-md ${
-              min === 1 ? "text-black pl-2" : "text-white"
-            } text-right pr-3 items-center`}
-          >
-            {min}
-          </p>
+          {min > 1 ? (
+            <p className={`text-md text-white text-right pr-3 items-center`}>
+              {min}
+            </p>
+          ) : null}
         </div>
 
         <div
@@ -39,11 +37,18 @@ export const StatusBar: React.FC<StatusBarProps> = ({ min, max }) => {
             </p>
           ) : null}
         </div>
+      </div>
+      <div className='flex justify-between'>
+        {min === 1 ? (
+          <p className={`text-md text-black text-right pr-2 `}>{min}</p>
+        ) : (
+          <div></div>
+        )}
         {max === 10000 ? (
-          <p className={`text-md text-black text-right pr-2 items-center`}>
-            {max}
-          </p>
-        ) : null}
+          <p className={`text-md text-black text-right pr-2 `}>{max}</p>
+        ) : (
+          <div></div>
+        )}
       </div>
     </div>
   );
