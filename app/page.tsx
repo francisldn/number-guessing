@@ -10,7 +10,7 @@ export default function Home() {
           className='flex flex-col gap-4 mx-auto w-[90%]'
         >
           <li>Firstly, you think of a number between 1 to 10,000</li>
-          <li>Then, I will guest your number</li>
+          <li>Then, I will guess your number</li>
           <li>
             You can respond with: <span className='font-bold'>too high</span>,{" "}
             <span className='font-bold'>too low</span> or{" "}
