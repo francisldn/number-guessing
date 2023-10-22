@@ -34,7 +34,7 @@ const ButtonTypeStyles = {
   [ButtonType.USERINPUT]:
     "border-blue-600 bg-blue-600 hover:bg-blue-800 text-white w-32",
   [ButtonType.GENERATE]:
-    "bg-gradient-to-br from-[#091679] to-[#00a1ff] border-blue-500 hover:bg-blue-800 text-white",
+    "bg-gradient-to-br from-[#091679] to-[#00a1ff] border-blue-500 hover:bg-blue-800 text-white hover:shadow-xl",
   disabled: "bg-grey-400 border-grey-400 text-grey-600",
 };
 
