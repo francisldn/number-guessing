@@ -90,6 +90,7 @@ export const UserGuessGame: React.FC<UserGuessGameProps> = ({
                 max={max.toString()}
                 min={min.toString()}
                 type='number'
+                required
               />
               {!isGameOver && message ? (
                 <p className='font-normal text-sm text-red-500'>{message}</p>
