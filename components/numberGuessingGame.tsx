@@ -7,7 +7,7 @@ import { ModalComponent } from "./modal";
 import { useRouter } from "next/navigation";
 
 interface NumberGuessingGameProps {
-  userGuess: boolean;
+  userGuess: boolean; // true if user is guessing, false if machine is guessing
 }
 
 export const NumberGuessingGame: React.FC<NumberGuessingGameProps> = ({
