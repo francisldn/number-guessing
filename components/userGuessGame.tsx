@@ -43,9 +43,7 @@ export const UserGuessGame: React.FC<UserGuessGameProps> = ({
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // validation
-    if (Number(guess) > max) {
-      return;
-    } else if (Number(guess) < min) {
+    if (Number(guess) > max || Number(guess) < min) {
       return;
     }
 
